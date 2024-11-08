@@ -1,0 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root{
+      --primary-color: #2095ae;
+      --white-color: #fff;
+      --light-gray-color: #ddd;
+       --blue-colr:
+
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+/*--------------Utility Class-----------*/
+.container{
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+img{
+    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+}
+.heading-normal-txt{
+    font-size: 1rem;
+    letter-spacing: 6px;
+    color: var(--primary-color);
+}
+.headings{
+    font-size: 3rem;
+    font-family: "ubuntu";
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+}
+.headings span{
+    color: var(--primary-color);
+}
+.secondary-headings{
+    color: var(--primary-color);
+}
+.lead{
+    font-size: 1.1rem;
+    line-height:2 ;
+    text-align: justify;
+}
+.primary-btn{
+    width: 50%;
+    outline: none;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    color:var(--white-color);
+    cursor: pointer;
+}
+
+/*--------Header-----------*/
+header {
+    background: var(--primary-color);
+    position: fixed;
+    top: 0;  
+    left: 0;
+    z-index: 1000;
+    width: 100%; /* Set width to 100% to cover the whole screen */
+    padding-top: 20px; /* Adjusted padding */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Increased height for better appearance */
+    width: 100%; /* Use full width of the viewport */
+    padding: 0 20px; /* Optional padding to add some space */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1; /* Allow ul to take available space */
+    justify-content: center; /* Center items within the nav */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Adjust spacing between items */
+}
+
+nav ul li a {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    text-decoration: none; /* Optional: remove underline */
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--white-color);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+nav ul li:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+.logo img {
+    width: 200px;
+    height: 40px;
+    object-fit: cover;
+}
+.btn{
+    font-size:1.3rem ;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none; 
+}
+
+  /*-----SHOWCASE---------*/
+  main{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .swiper{
+    height:100vh;
+  }
+  .slide-container{
+    width: 100%;
+  } 
+  .slide-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video-overlay{
+    position:absolute;
+    z-index: 5;
+    top:50%;
+    left: 50%;
+    text-align: center;
+    width: 100%;
+    font-family: "ubuntu";
+    transform: translate(-50%,-50%);
+  }
+  .video-overlay p{
+    font-size: 1rem;
+    letter-spacing: 8px;
+    color:var(--white-color);
+    animation: animate 4s forwards;
+  }
+  .video-overlay h2{
+    font-size: 5rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    animation: animate 4s forwards;
+    transition: all 0.5s ease-in-out;
+  }
+  .overlay{
+    position: relative;
+  }
+  .overlay::after{
+    content: "";
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100% ;
+    background:rgba(0,0,0,0.4);
+  }
+  @keyframes animate{
+ 0%{
+    transform:translateX(-50%);
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.2;
+  }
+  70%{
+    opacity: 0.5;
+  }
+  70%{
+    opacity: 1;
+    transform: translateX(-0%);
+  }
+  }
+  .video-overlay h2 span{
+    color:transparent;
+    -webkit-text-stroke: 1px  var(--white-color);
+  }
+  /*------SEARCH-------*/
+  #Location-search{
+     transform: translateY(-170%);
+
+  }
+   .form-wrapper{
+    background-color: rgba(0,0,0,0.6);
+    padding:2rem;
+    width:100%;
+   }
+   form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .form-control{
+    width: 100%;
+   }
+   form input,select{
+    padding: 0.6rem;
+    outline: none;
+    font-size: 1.1rem;
+    color: #000;
+    border: 1px solid var(--light-gray-color);
+    margin: 0 0.4rem;
+    border-radius: 4px;
+   }
+   /*--------ABOUT US--------*/
+   .about-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    margin: 3rem 0;
+    align-items: center; /* Ensures that content and image are vertically aligned */
+}
+
+.agency-right-side .img {
+    /* Ensures the image is responsive and fits well in the grid */
+    width: 100%;
+    position: relative; /* The image will fill the container */
+}
+
+.agency-right-side .img img {
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    transition: 0.5s ease-in;
+}
+.about-content-wrapper h2 span{
+    color: var(--primary-color);
+    font-family: "ubuntu";
+}
+.about-content-wrapper ul{
+    list-style: none;
+}
+.agency-right-side .img::after{
+    content: "";
+    position: absolute;
+    top:15px;
+    left: 55px;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-color);
+    width: 70%;
+    height: 100%;
+    z-index: -2;
+}
+.agency-right-side .img img:hover{
+    transform: scale(0.95);
+}
+
+/*-------services-----*/
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap:1.5rem;
+}
+
+.services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+.services .box-container .box:hover{
+    background:black;
+}
+.services .box-container .box img{
+    height:7rem ;
+}
+.services .box-container .box h3{
+    color: var(--white-color);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+.heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #000;
+}
+/* Initial state for the fly-in effect */
+.fly-in {
+    opacity: 0;
+    transform: translateX(-100px); /* Initially off the screen (from the left) */
+    transition: all 0.6s ease-out;
+}
+
+/* When the element is visible in the viewport, it will fly in */
+.fly-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Reset to the original position */
+}
+/*------gallery--------*/
+/* Gallery Section */
+#gallery {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns to make it wider */
+    gap: 0;
+    padding: 0;
+    max-width: 1400px;        /* Widen the max width to 1200px for a horizontal layout */
+    max-height: 400px;        /* Reduce the height to 400px for a more horizontal layout */
+}
+
+/* Image-specific grid classes */
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall-wide {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.medium {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns on smaller screens */
+    }
+}
+/*---------LOGIN----------*/
+.signup-link {
+    text-align: center;  /* Center the text */
+    margin-top: 10px;    /* Add some space above */
+}
+#signup-btn {
+    margin-top: 5px;    /* Add space above the button */
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.agency-left-side {
+    padding: 50px;
+    background-color: white;
+    max-width: 800px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading-normal-txt {
+    font-size: 24px;
+    color: #333;
+}
+
+.headings {
+    font-size: 36px;
+    color: #444;
+}
+
+.headings span {
+    color: #ff6347;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.icons i {
+    font-size: 18px;
+    color: #ff6347;
+    margin-right: 10px;
+}
+
+/* Fly-in effect styles */
+.fly-in {
+    opacity: 0;
+    transform: translateX(-100px); /* Initially off the screen */
+    transition: all 0.6s ease-out;
+}
+
+.fly-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Optional styling for the observer trigger */
+.hidden {
+    visibility: hidden;
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    height: 300px; /* Height for accommodating content */
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative; /* Position relative for overlay */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.c1overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Add padding to overlay text */
+    text-align: center; /* Center overlay text */
+}
+
+.card:hover .c1overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 10px; /* Position the button at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 2; /* Ensure button is above the overlay */
+}
+
+#itinerary-result {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#itinerary-result h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#itinerary-result ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#itinerary-result li {
+    margin-bottom: 20px;
+}
+
+#itinerary-result h3 {
+    color: #0056b3;
+}
+
+#itinerary-result ul ul {
+    padding-left: 20px;
+}
+
+#itinerary-result ul ul li {
+    margin-bottom: 5px;
+}
+
+.itinerary-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.itinerary-container > h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.day-card, .hotel-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-card:hover, .hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.day-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.day-icon {
+    background-color: #3498db;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-description {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.activities-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.activities-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.activities-list i {
+    color: #2ecc71;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.hotel-suggestions {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #ecf0f1;
+}
+
+.hotel-suggestions > h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.hotel-card h3 {
+    color: #3498db;
+    margin: 0 0 10px 0;
+}
+
+.hotel-card p {
+    margin: 5px 0;
+    color: #34495e;
+    font-size: 0.9em;
+}
+
+.hotel-card h3 a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hotel-card h3 a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.day-card, .hotel-card {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .itinerary-container {
+        padding: 10px;
+    }
+
+    .day-card, .hotel-card {
+        padding: 15px;
+    }
+
+    .day-header h3 {
+        font-size: 1.3em;
+    }
+
+    .day-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .activities-list li {
+        font-size: 0.9em;
+    }
+
+    .hotel-card h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .itinerary-container > h2,
+    .hotel-suggestions > h2 {
+        font-size: 1.5em;
+    }
+
+    .day-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .day-icon {
+        margin-top: 10px;
+    }
+
+    .activities-list li {
+        font-size: 0.85em;
+    }
+
+    .hotel-card h3 {
+        font-size: 1.1em;
+    }
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-container p {
+    margin-top: 20px;
+    color: #3498db;
+    font-size: 1.2em;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

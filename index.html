@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="responsive.css"/>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!----Header------>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="./images/logo.jpg" alt=""/>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <!-- <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li> -->
+                    <!-- <li><a href="#login-section">Login</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!----showcase----->
+    <main>
+        <div class="slider-container swiper">
+            <div class="slide-content swiper-wrapper">
+                <div class="overlay swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="./videos/221543_small.mp4" type="video/mp4" alt="">
+                    </video>
+                    <div class="video-overlay">
+                        <p>Travel the World with Us</p>
+                        <h2><span>Discover</span> The World</h2>
+                        <h2>With our Guide</h2>
+                    </div>
+                </div>
+                <div class="overlay swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="./videos/31466-387662187.mp4" type="video/mp4" alt="">
+                    </video>
+                    <div class="video-overlay">
+                        <p>Travel the World with Us</p>
+                        <h2><span>Discover</span> The World</h2>
+                        <h2>With our Guide</h2>
+                    </div>
+                </div>
+                <div class="overlay swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="./videos/230882_small.mp4" type="video/mp4" alt="">
+                    </video>
+                    <div class="video-overlay">
+                        <p>Travel the World with Us</p>
+                        <h2><span>Discover</span> The World</h2>
+                        <h2>With our Guide</h2>
+                    </div>
+                </div>
+                <div class="overlay swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="./videos/200023-911915504_small.mp4" type="video/mp4" alt="">
+                    </video>
+                    <div class="video-overlay">
+                        <p>Travel the World with Us</p>
+                        <h2><span>Discover</span> The World</h2>
+                        <h2>With our Guide</h2>
+                    </div>
+                </div>
+                <div class="overlay swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="./videos/199956-911694856_medium.mp4" type="video/mp4" alt="">
+                    </video>
+                    <div class="video-overlay">
+                        <p>Travel the World with Us</p>
+                        <h2><span>Discover</span> The World</h2>
+                        <h2>With our Guide</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-------Search Location------->
+    <section id="Location-search">
+        <div class="container">
+            <div class="form-wrapper">
+                <form id="search-form" action="#">
+                    <select id="destination" class="form-control" required>
+                        <option value="" disabled selected>Where to?</option>
+                        <option value="Greece">Greece</option>
+                        <option value="London">London</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="France">France</option>
+                        <option value="Italy">Italy</option>
+                        <option value="United States">United States</option>
+                        <option value="China">China</option>
+                        <option value="Spain">Spain</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Greece">Greece</option>
+                        <option value="India">India</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Canada">Canada</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Peru">Peru</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Cuba">Cuba</option>
+                    </select>
+
+                    <select id="duration" class="form-control" required>
+                        <option value="" disabled selected>Duration</option>
+                        <option value="1">1 Day Tour</option>
+                        <option value="3">2-4 Days Tour</option>
+                        <option value="6">5-7 Days Tour</option>
+                        <option value="8">7+ Days Tour</option>
+                    </select>
+                    <button type="submit" class="primary-btn">Search Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add a new div to display the itinerary -->
+    <div id="itinerary-result" class="mt-4"></div>
+
+    <!------ABOUT US--------->
+    <section id="about">
+        <div class="container">
+            <div class="about-content-wrapper">
+                <div class="agency-left-side">
+                    <p class="heading-normal-txt fly-in">
+                        THE BEST TRAVEL PLANNER
+                    </p>
+                    <h2 class="headings fly-in">
+                        DISCOVER THE <span>WORLD</span> WITH OUR GUIDE
+                    </h2>
+                    <p class="fly-in">Welcome to <b>Travel Tales</b>, your trusted companion in planning unforgettable travel experiences. We specialize in crafting personalized travel itineraries that cater to your unique preferences and needs.</p>
+                    <p class="fly-in">Our mission is to make travel planning effortless and enjoyable, ensuring every journey is seamless and memorable. We envision a world where every trip is perfectly tailored to the traveler's desires, and we strive to innovate continuously to bring you the best in travel planning.</p>
+                    <p class="fly-in">Our dedicated team of travel experts brings a wealth of experience and passion to our services. From our skilled planners to our customer support team, everyone at <b>Travel Tales</b> is committed to providing exceptional service and support.</p>
+                    <p class="fly-in">At <b>Travel Tales</b>, we value creativity, reliability, and customer satisfaction. These core values drive us to exceed your expectations and deliver travel experiences that are truly remarkable.</p>
+                    <p class="fly-in">For more information or assistance, feel free to Contact us.</p>
+                    <ul>
+                        <li>
+                            <div class="icons">
+                                <i class="fa fa-check"> 20 Years Experience</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icons">
+                                <i class="fa fa-check"> 150 Tour Destinations</i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icons">
+                                <i class="fa fa-phone-volume"> 855-333-4444</i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="agency-right-side">
+                    <div class="img">
+                        <img src="./images/aboutus.jpg" alt="About us image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages">
+        <h1 class="heading-title">Recommended Packages</h1>
+        <div class="carousel-container">
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="./images/canada.jpeg" class="card-img-top" alt="Paris">
+                    <div class="c1overlay">Canada is a vast country with diverse landscapes. It has stunning mountains and vibrant cities. Outdoor adventures abound in its national parks.</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Canada</h5>
+                        <p class="card-text">5 days - ₹4500</p>
+                        <!-- <div class="btn-container">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="./images/maldives.jpg" class="card-img-top" alt="Tokyo">
+                    <div class="c1overlay">The Maldives is a tropical paradise. It features overwater bungalows and clear blue waters. The coral reefs are perfect for snorkeling and diving.</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Maldives</h5>
+                        <p class="card-text">7 days - ₹5500</p>
+                        <!-- <div class="btn-container">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="./images/mountains.jpg" class="card-img-top" alt="Sydney">
+                    <div class="c1overlay">Kerala is known as "God's Own Country." It has beautiful backwaters and lush greenery. The state is famous for Ayurveda and rich cultural traditions.</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kerala, India</h5>
+                        <p class="card-text">6 days - ₹6000</p>
+                        <!-- <div class="btn-container">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="./images/greece.jpeg" class="card-img-top" alt="Cairo">
+                    <div class="c1overlay">Greece is known for its ancient ruins and stunning islands. Places like Santorini and Mykonos are popular. The Mediterranean cuisine is delicious.</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Greece</h5>
+                        <p class="card-text">4 days - ₹3500</p>
+                        <!-- <div class="btn-container">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <img src="./images/snow.jpg" class="card-img-top" alt="New York">
+                    <div class="c1overlay">Manali is a beautiful hill station in the Himalayas. It offers stunning mountain views and adventure sports. The local culture is vibrant and welcoming.</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Manali, India</h5>
+                        <p class="card-text">8 days - ₹7000</p>
+                        <!-- <div class="btn-container">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <h1 class="heading-title">Gallery</h1>
+    <section id="gallery">
+        <div class="gallery-container">
+            <div class="gallery-item tall"><img src="./gallery/img1.jpg" alt="Gallery Image 1"></div>
+            <div class="gallery-item small"><img src="./gallery/img2.jpg" alt="Gallery Image 2"></div>
+            <div class="gallery-item small"><img src="./gallery/img3.jpeg" alt="Gallery Image 3"></div>
+            <div class="gallery-item tall-wide"><img src="./gallery/img4.jpeg" alt="Gallery Image 4"></div>
+            <div class="gallery-item wide"><img src="./gallery/img5.jpg" alt="Gallery Image 5"></div>
+            <div class="gallery-item wide"><img src="./gallery/img6.jpg" alt="Gallery Image 6"></div>
+            <div class="gallery-item wide"><img src="./gallery/img7.jpg" alt="Gallery Image 7"></div>
+        </div>
+    </section> -->
+
+    <!-- Login Section -->
+    <!-- <section id="login-section">
+        <div class="content1">
+            <h1 class="heading-title">Login</h1>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </section> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".fly-in"); // Select all elements to fly in
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible"); // Add the 'visible' class when in view
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            });
+    
+            // Attach observer to each element
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="swiper.js"></script>
+    <!-- Add this line before the closing </body> tag -->
+    <script src="itinerary.js"></script>
+    <!-- Add this before your closing </body> tag -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AlzaSy3_D5WlCDkPPcRY8Sdx6BVh7GziOkJBFKb&libraries=places"></script>
+</body>
+</html>
